@@ -1,0 +1,34 @@
+{
+  "name": "react-native-material-textinput",
+  "version": "1.0.0",
+  "description": "Textual input component for React Native",
+  "license": "MIT",
+  "author": {
+    "name": "Maxim Postnikov",
+    "url": "https://github.com/maximpostnikov",
+    "email": "itsmaximpostnikov@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/perushevandkhmelev-agency/react-native-material-textinput/issues"
+  },
+  "homepage": "https://github.com/perushevandkhmelev-agency/react-native-material-textinput",
+  "readme": "https://github.com/perushevandkhmelev-agency/react-native-material-textinput#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:perushevandkhmelev-agency/react-native-material-textinput.git"
+  },
+  "main": "lib/Input.js",
+  "keywords": [
+    "react",
+    "react-component",
+    "react-native",
+    "ios",
+    "android",
+    "textfield",
+    "textinput",
+    "material-design"
+  ],
+  "dependencies": {
+    "prop-types": "^15.5.10"
+  }
+}
