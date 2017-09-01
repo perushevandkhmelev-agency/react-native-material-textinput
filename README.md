@@ -81,6 +81,15 @@ underlineHeight       | Number             | `1`
 underlineColor        | String             | `gray`
 underlineActiveColor  | String             | `#3f51b5`
 
+### ErrorHelper
+
+Name                  | Type               | Default
+:-------------------- |:------------------ |:----------
+error                 | String             | 
+errorPaddingTop       | Number             | `8`
+errorColor            | String             | `#fc1f4a`
+errorFontSize         | Number             | `12`
+
 Other [TextInput](https://facebook.github.io/react-native/docs/textinput.html#props) properties will also work
 
 ## Example
