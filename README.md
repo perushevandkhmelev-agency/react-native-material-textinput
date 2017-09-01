@@ -65,7 +65,7 @@ paddingLeft           | Number             |
 color                 | String             | `black`
 activeColor           | String             |
 fontFamily            | String             |
-fontSize              | Number             | `16`
+fontSize              | Number             | `15`
 fontWeight            | String or Number   | `normal`
 multiline             | Bool               | `false`
 onFocus               | Function
