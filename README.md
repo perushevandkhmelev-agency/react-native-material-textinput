@@ -56,12 +56,12 @@ height                | Number             |
 maxHeight             | Number             |
 marginTop             | Number             |
 marginRight           | Number             |
-marginBottom          | Number             | `16`
+marginBottom          | Number             | `8`
 marginLeft            | Number             |
 paddingTop            | Number             | `20`
-paddingRight          | Number             |
+paddingRight          | Number             | `0`
 paddingBottom         | Number             | `8`
-paddingLeft           | Number             |
+paddingLeft           | Number             | `0`
 color                 | String             | `black`
 activeColor           | String             |
 fontFamily            | String             |
