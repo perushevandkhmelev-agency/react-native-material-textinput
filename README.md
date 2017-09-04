@@ -36,9 +36,9 @@ name                  | type               | default
 label                 | String             |
 labelDuration         | Number             | `200`
 labelColor            | String             | `gray`
-labelActiveTop        | Number             | `0`
+labelActiveTop        | Number             | `-18`
 labelActiveColor      | String             | `#3f51b5`
-labelActiveFontSize   | Number             | `12`
+labelActiveScale      | Number             | `0.8`
 
 ### Placeholder
 
@@ -80,6 +80,7 @@ underlineDuration     | Number             | `200`
 underlineHeight       | Number             | `1`
 underlineColor        | String             | `gray`
 underlineActiveColor  | String             | `#3f51b5`
+underlineActiveHeight | Number             | `2`
 
 ### ErrorHelper
 

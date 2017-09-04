@@ -3,7 +3,16 @@ import { StyleSheet, StatusBar, View, Text, ScrollView } from 'react-native'
 import TextInput from 'react-native-material-textinput'
 
 export default class App extends Component {
+  state = {
+    productName: '',
+    price: '',
+    multilineText:
+      'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.'
+  }
+
   render() {
+    let { productName, price, multilineText } = this.state
+
     return (
       <View style={styles.layout}>
         <StatusBar backgroundColor="#1a237e" barStyle="light-content" />
@@ -11,11 +20,21 @@ export default class App extends Component {
           <Text style={styles.headerText}>Material Design Text Fields</Text>
         </View>
         <ScrollView contentContainerStyle={styles.container}>
-          <TextInput label="Product name" />
-          <TextInput label="Price" placeholder="$5,999.00" />
+          <TextInput
+            label="Product name"
+            value={productName}
+            onChangeText={productName => this.setState({ productName })}
+          />
+          <TextInput
+            label="Price"
+            placeholder="$5,999.00"
+            value={price}
+            onChangeText={price => this.setState({ price })}
+          />
           <TextInput
             label="The Matrix"
-            value="A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers."
+            value={multilineText}
+            onChangeText={multilineText => this.setState({ multilineText })}
             multiline
             minHeight={150}
           />
