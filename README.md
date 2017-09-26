@@ -67,10 +67,10 @@ activeColor           | String             |
 fontFamily            | String             |
 fontSize              | Number             | `15`
 fontWeight            | String or Number   | `normal`
-multiline             | Bool               | `false`
 onFocus               | Function
 onBlur                | Function
 onChangeText          | Function
+onContentSizeChange   | Function
 
 ### Underline
 
@@ -86,7 +86,7 @@ underlineActiveHeight | Number             | `2`
 
 Name                  | Type               | Default
 :-------------------- |:------------------ |:----------
-error                 | String             | 
+error                 | String             |
 errorPaddingTop       | Number             | `8`
 errorColor            | String             | `#fc1f4a`
 errorFontSize         | Number             | `12`
