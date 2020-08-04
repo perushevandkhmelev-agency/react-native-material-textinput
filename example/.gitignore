@@ -1,5 +1,13 @@
-.DS_Store
-node_modules/
+node_modules/**/*
+.expo/*
 npm-debug.*
-yarn-error.*
-.expo/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# macOS
+.DS_Store

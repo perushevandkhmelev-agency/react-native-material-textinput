@@ -1,42 +1,24 @@
 {
-  "name": "react-native-material-textinput-example",
-  "version": "1.0.0",
-  "license": "MIT",
-  "author": {
-    "name": "Maxim Postnikov",
-    "url": "https://github.com/maximpostnikov",
-    "email": "itsmaximpostnikov@gmail.com"
-  },
-  "bugs": {
-    "url": "https://github.com/perushevandkhmelev-agency/react-native-material-textinput/issues"
-  },
-  "homepage": "https://github.com/perushevandkhmelev-agency/react-native-material-textinput",
-  "readme": "https://github.com/perushevandkhmelev-agency/react-native-material-textinput#readme",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:perushevandkhmelev-agency/react-native-material-textinput.git"
-  },
-  "devDependencies": {
-    "jest-expo": "~20.0.0",
-    "react-native-scripts": "1.2.1",
-    "react-test-renderer": "16.0.0-alpha.12"
-  },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "react-native-scripts start",
-    "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --watch"
-  },
-  "jest": {
-    "preset": "jest-expo"
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^19.0.0",
-    "prop-types": "^15.5.10",
-    "react": "16.0.0-alpha.12",
-    "react-native": "^0.46.1",
-    "react-native-material-textinput": "file:../"
-  }
+    "expo": "~38.0.8",
+    "expo-status-bar": "^1.0.2",
+    "react": "~16.11.0",
+    "react-dom": "~16.11.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
+    "react-native-material-textinput": "file:../",
+    "react-native-web": "~0.11.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "babel-preset-expo": "~8.1.0"
+  },
+  "private": true
 }
