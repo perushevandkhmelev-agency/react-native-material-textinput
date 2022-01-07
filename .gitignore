@@ -1,4 +1,5 @@
 .DS_Store
+example
 node_modules/
 npm-debug.*
 yarn-error.*
