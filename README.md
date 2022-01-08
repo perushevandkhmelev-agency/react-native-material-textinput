@@ -89,6 +89,10 @@ export default Example
 
 Other [TextInput](https://facebook.github.io/react-native/docs/textinput.html#props) properties will also work
 
+## RTL
+
+Supported using I18nManager from react-native
+
 ## License
 
 The MIT License.
