@@ -1,5 +1,7 @@
 .DS_Store
+.idea
 example
 node_modules/
 npm-debug.*
 yarn-error.*
+lib/

@@ -47,6 +47,7 @@ export default Example
 
 | Name                | Type             | Default  |
 | :------------------ | :--------------- | :------- |
+| inputRef            | Ref              |
 | minHeight           | Number           |
 | height              | Number           |
 | maxHeight           | Number           |

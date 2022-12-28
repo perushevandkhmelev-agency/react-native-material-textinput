@@ -1,6 +1,10 @@
 import React from 'react'
 import { Text } from 'react-native'
-import PropTypes from 'prop-types'
+import type { PlaceholderProps } from './types'
+
+const defaultProps = {
+  placeholderColor: 'gray'
+}
 
 const Placeholder = ({
   paddingTop,
@@ -14,9 +18,10 @@ const Placeholder = ({
   placeholderColor,
   hasValue,
   focused
-}) => {
+}: PlaceholderProps & typeof defaultProps) => {
   return (
     <Text
+      numberOfLines={1}
       style={{
         position: 'absolute',
         top: 0,
@@ -30,21 +35,12 @@ const Placeholder = ({
         fontFamily,
         fontSize,
         fontWeight
-      }}
-      pointerEvents="none"
-      numberOfLines={1}>
+      }}>
       {placeholder}
     </Text>
   )
 }
 
-Placeholder.propTypes = {
-  placeholder: PropTypes.string,
-  placeholderColor: PropTypes.string
-}
-
-Placeholder.defaultProps = {
-  placeholderColor: 'gray'
-}
+Placeholder.defaultProps = defaultProps
 
 export default Placeholder
