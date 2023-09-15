@@ -3,8 +3,12 @@
 [![npm version][npm-img]][npm-url]
 [![npm downloads][npm-dls]][npm-url]
 [![github issues][issues-img]][issues-url]
+[![bundlephobia][bundlephobia-img]][bundlephobia-url]
+[![license][license-img]][license-url]
 
 Textual input component for React Native (iOS & Android).
+
+![example][example-url]
 
 ## Usage
 
@@ -105,3 +109,8 @@ See [LICENSE](LICENSE)
 [npm-dls]: https://img.shields.io/npm/dt/react-native-material-textinput.svg?style=flat
 [issues-url]: https://github.com/perushevandkhmelev-agency/react-native-material-textinput/issues
 [issues-img]: https://img.shields.io/github/issues/perushevandkhmelev-agency/react-native-material-textinput.svg?style=flat
+[bundlephobia-url]: https://bundlephobia.com/package/react-native-material-textinput
+[bundlephobia-img]: https://img.shields.io/bundlephobia/min/react-native-material-textinput
+[license-url]: https://github.com/perushevandkhmelev-agency/react-native-material-textinput/blob/main/LICENSE
+[license-img]: https://img.shields.io/npm/l/react-native-material-textinput
+[example-url]: https://github.com/perushevandkhmelev-agency/react-native-material-textinput/assets/20732110/77bfb57e-0d1e-42f0-a5e8-c2d4b82ce4df
