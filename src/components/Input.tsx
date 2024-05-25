@@ -4,11 +4,18 @@ import type { NativeSyntheticEvent, TextInputContentSizeChangeEventData, TextInp
 import Label from './Label'
 import Placeholder from './Placeholder'
 import Underline from './Underline'
-import ErrorHelper from './ErrorHelper'
-import type { InputProps, HasValueProps, FocusedProps, TextInputStyleProps } from './types'
+import ErrorHelper, { defaultProps as errorDefaultProps } from './ErrorHelper'
+import type {
+  InputProps,
+  HasValueProps,
+  FocusedProps,
+  TextInputStyleProps,
+  ErrorHelperDefaultPropsType,
+  InputDefaultPropsType
+} from './types'
 
-const defaultProps = {
-  ...ErrorHelper.defaultProps,
+const defaultProps: Required<ErrorHelperDefaultPropsType & InputDefaultPropsType> = {
+  ...errorDefaultProps,
   marginBottom: 8,
   paddingTop: 20,
   paddingRight: 0,
@@ -25,17 +32,17 @@ const Input = ({
   maxHeight,
   marginTop,
   marginRight,
-  marginBottom,
+  marginBottom = defaultProps.marginBottom,
   marginLeft,
-  paddingTop,
-  paddingRight,
-  paddingBottom,
-  paddingLeft,
-  color,
+  paddingTop = defaultProps.paddingTop,
+  paddingRight = defaultProps.paddingRight,
+  paddingBottom = defaultProps.paddingBottom,
+  paddingLeft = defaultProps.paddingLeft,
+  color = defaultProps.color,
   activeColor,
   fontFamily,
-  fontSize,
-  fontWeight,
+  fontSize = defaultProps.fontSize,
+  fontWeight = defaultProps.fontWeight,
   label,
   labelDuration,
   labelColor,
@@ -54,7 +61,7 @@ const Input = ({
   errorPaddingTop,
   errorFontSize,
   ...props
-}: InputProps & typeof defaultProps) => {
+}: InputProps) => {
   const [value, setValue] = useState('')
   const [focused, setFocused] = useState<FocusedProps['focused']>(false)
   const [height, setHeight] = useState(fontSize * 1.5)
@@ -200,7 +207,5 @@ const Input = ({
     }
   }
 }
-
-Input.defaultProps = defaultProps
 
 export default Input

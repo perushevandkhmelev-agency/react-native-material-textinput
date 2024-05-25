@@ -66,7 +66,7 @@ interface PaddingStyleProps {
   paddingLeft?: number
 }
 
-type TextStyleProps = Pick<TextStyle, 'fontFamily' | 'fontSize' | 'fontWeight'>
+export type TextStyleProps = Pick<TextStyle, 'fontFamily' | 'fontSize' | 'fontWeight'>
 
 export interface FocusedProps {
   focused?: boolean
@@ -80,3 +80,22 @@ export type TextInputStyleProps = PaddingStyleProps &
   TextStyleProps &
   Pick<InputProps, 'minHeight' | 'maxHeight' | 'color'> &
   Pick<TextStyle, 'textAlign'>
+
+export type InputDefaultPropsType = Pick<
+  InputProps,
+  'marginBottom' | 'paddingTop' | 'paddingRight' | 'paddingBottom' | 'paddingLeft' | 'color' | 'fontSize' | 'fontWeight'
+>
+
+export type LabelDefaultPropsType = Pick<
+  LabelProps,
+  'labelDuration' | 'labelColor' | 'labelActiveColor' | 'labelActiveScale' | 'labelActiveTop'
+>
+
+export type PlaceholderDefaultPropsType = Pick<PlaceholderProps, 'placeholderColor'>
+
+export type UnderlineDefaultPropsType = Pick<
+  UnderlineProps,
+  'underlineDuration' | 'underlineHeight' | 'underlineColor' | 'underlineActiveHeight' | 'underlineActiveColor'
+>
+
+export type ErrorHelperDefaultPropsType = Pick<ErrorHelperProps, 'errorColor' | 'errorFontSize' | 'errorPaddingTop'>
