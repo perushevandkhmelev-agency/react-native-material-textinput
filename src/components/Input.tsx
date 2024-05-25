@@ -57,7 +57,7 @@ const Input = ({
   underlineActiveColor,
   underlineActiveHeight,
   error,
-  errorColor,
+  errorColor = errorDefaultProps.errorColor,
   errorPaddingTop,
   errorFontSize,
   ...props
