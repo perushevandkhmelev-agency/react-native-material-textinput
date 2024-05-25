@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { View, Animated } from 'react-native'
-import type { UnderlineProps } from './types'
+import type { UnderlineDefaultPropsType, UnderlineProps } from './types'
 
-const defaultProps = {
+const defaultProps: Required<UnderlineDefaultPropsType> = {
   underlineDuration: 200,
   underlineHeight: 1,
   underlineColor: 'gray',
@@ -12,15 +12,15 @@ const defaultProps = {
 
 const Underline = ({
   activeColor,
-  underlineHeight,
-  underlineColor,
-  underlineDuration,
-  underlineActiveColor,
-  underlineActiveHeight,
+  underlineHeight = defaultProps.underlineHeight,
+  underlineColor = defaultProps.underlineColor,
+  underlineDuration = defaultProps.underlineDuration,
+  underlineActiveColor = defaultProps.underlineActiveColor,
+  underlineActiveHeight = defaultProps.underlineActiveHeight,
   error,
   errorColor,
   focused
-}: UnderlineProps & typeof defaultProps) => {
+}: UnderlineProps) => {
   const [animatedScaleX] = useState(new Animated.Value(error ? 1 : 0.01))
   const [animatedOpacity] = useState(new Animated.Value(error ? 1 : 0))
 
@@ -80,7 +80,5 @@ const Underline = ({
     </View>
   )
 }
-
-Underline.defaultProps = defaultProps
 
 export default Underline
