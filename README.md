@@ -12,16 +12,17 @@ Textual input component for React Native (iOS & Android).
 
 ## Usage
 
-```javascript
+```typescript
 import React, { useState } from 'react'
-import TextInput from 'react-native-material-textinput'
+import TextInput, { TextInputRef } from 'react-native-material-textinput'
 
 const Example = () => {
+  const inputRef = useRef<TextInputRef>(null)
   const [name, setName] = useState('')
 
-  const handleInputChange = (value) => setName(value)
+  const handleInputChange = (value: typeof name) => setName(value)
 
-  return <TextInput label="Name" value={name} onChangeText={handleInputChange} />
+  return <TextInput ref={inputRef} label="Name" value={name} onChangeText={handleInputChange} />
 }
 
 export default Example
@@ -49,29 +50,29 @@ export default Example
 
 ### Input
 
-| Name                | Type             | Default  |
-| :------------------ | :--------------- | :------- |
-| inputRef            | Ref              |
-| minHeight           | Number           |
-| height              | Number           |
-| maxHeight           | Number           |
-| marginTop           | Number           |
-| marginRight         | Number           |
-| marginBottom        | Number           | `8`      |
-| marginLeft          | Number           |
-| paddingTop          | Number           | `20`     |
-| paddingRight        | Number           | `0`      |
-| paddingBottom       | Number           | `8`      |
-| paddingLeft         | Number           | `0`      |
-| color               | String           | `black`  |
-| activeColor         | String           |
-| fontFamily          | String           |
-| fontSize            | Number           | `15`     |
-| fontWeight          | String or Number | `normal` |
-| onFocus             | Function         |
-| onBlur              | Function         |
-| onChangeText        | Function         |
-| onContentSizeChange | Function         |
+| Name                | Type              | Default  |
+| :------------------ | :---------------- | :------- |
+| ref                 | Ref<TextInputRef> |
+| minHeight           | Number            |
+| height              | Number            |
+| maxHeight           | Number            |
+| marginTop           | Number            |
+| marginRight         | Number            |
+| marginBottom        | Number            | `8`      |
+| marginLeft          | Number            |
+| paddingTop          | Number            | `20`     |
+| paddingRight        | Number            | `0`      |
+| paddingBottom       | Number            | `8`      |
+| paddingLeft         | Number            | `0`      |
+| color               | String            | `black`  |
+| activeColor         | String            |
+| fontFamily          | String            |
+| fontSize            | Number            | `15`     |
+| fontWeight          | String or Number  | `normal` |
+| onFocus             | Function          |
+| onBlur              | Function          |
+| onChangeText        | Function          |
+| onContentSizeChange | Function          |
 
 ### Underline
 
