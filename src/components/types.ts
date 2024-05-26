@@ -1,4 +1,3 @@
-import type { RefObject } from 'react'
 import type { TextInput, TextInputProps, TextStyle } from 'react-native'
 
 export interface InputProps
@@ -9,7 +8,6 @@ export interface InputProps
     ErrorHelperProps,
     PaddingStyleProps,
     TextStyleProps {
-  inputRef?: RefObject<TextInput>
   minHeight?: number
   height?: number
   maxHeight?: number
@@ -20,6 +18,8 @@ export interface InputProps
   color?: string
   activeColor?: string
 }
+
+export type InputRef = TextInput
 
 export interface LabelProps
   extends TextStyleProps,

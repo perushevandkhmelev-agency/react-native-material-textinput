@@ -11,7 +11,8 @@ import type {
   FocusedProps,
   TextInputStyleProps,
   ErrorHelperDefaultPropsType,
-  InputDefaultPropsType
+  InputDefaultPropsType,
+  InputRef
 } from './types'
 
 const defaultProps: Required<ErrorHelperDefaultPropsType & InputDefaultPropsType> = {
@@ -26,42 +27,44 @@ const defaultProps: Required<ErrorHelperDefaultPropsType & InputDefaultPropsType
   fontWeight: 'normal'
 }
 
-const Input = ({
-  inputRef,
-  minHeight,
-  maxHeight,
-  marginTop,
-  marginRight,
-  marginBottom = defaultProps.marginBottom,
-  marginLeft,
-  paddingTop = defaultProps.paddingTop,
-  paddingRight = defaultProps.paddingRight,
-  paddingBottom = defaultProps.paddingBottom,
-  paddingLeft = defaultProps.paddingLeft,
-  color = defaultProps.color,
-  activeColor,
-  fontFamily,
-  fontSize = defaultProps.fontSize,
-  fontWeight = defaultProps.fontWeight,
-  label,
-  labelDuration,
-  labelColor,
-  labelActiveTop,
-  labelActiveColor,
-  labelActiveScale,
-  placeholder,
-  placeholderColor,
-  underlineDuration,
-  underlineHeight,
-  underlineColor,
-  underlineActiveColor,
-  underlineActiveHeight,
-  error,
-  errorColor = errorDefaultProps.errorColor,
-  errorPaddingTop,
-  errorFontSize,
-  ...props
-}: InputProps) => {
+const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
+  {
+    minHeight,
+    maxHeight,
+    marginTop,
+    marginRight,
+    marginBottom = defaultProps.marginBottom,
+    marginLeft,
+    paddingTop = defaultProps.paddingTop,
+    paddingRight = defaultProps.paddingRight,
+    paddingBottom = defaultProps.paddingBottom,
+    paddingLeft = defaultProps.paddingLeft,
+    color = defaultProps.color,
+    activeColor,
+    fontFamily,
+    fontSize = defaultProps.fontSize,
+    fontWeight = defaultProps.fontWeight,
+    label,
+    labelDuration,
+    labelColor,
+    labelActiveTop,
+    labelActiveColor,
+    labelActiveScale,
+    placeholder,
+    placeholderColor,
+    underlineDuration,
+    underlineHeight,
+    underlineColor,
+    underlineActiveColor,
+    underlineActiveHeight,
+    error,
+    errorColor = errorDefaultProps.errorColor,
+    errorPaddingTop,
+    errorFontSize,
+    ...props
+  },
+  ref
+) => {
   const [value, setValue] = useState('')
   const [focused, setFocused] = useState<FocusedProps['focused']>(false)
   const [height, setHeight] = useState(fontSize * 1.5)
@@ -156,7 +159,7 @@ const Input = ({
       {placeholder ? <Placeholder {...placeholderProps} /> : null}
       <TextInput
         {...props}
-        ref={inputRef}
+        ref={ref}
         style={inputStyle}
         underlineColorAndroid="transparent"
         onFocus={handleFocus}
@@ -208,4 +211,4 @@ const Input = ({
   }
 }
 
-export default Input
+export default React.forwardRef(Input)
