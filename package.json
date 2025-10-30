@@ -3,11 +3,7 @@
   "version": "1.5.0",
   "description": "Textual input component for React Native",
   "license": "MIT",
-  "author": {
-    "name": "Maxim Postnikov",
-    "url": "https://github.com/maximpostnikov",
-    "email": "itsmaximpostnikov@gmail.com"
-  },
+  "author": "Perushev & Khmelev",
   "bugs": {
     "url": "https://github.com/perushevandkhmelev-agency/react-native-material-textinput/issues"
   },
